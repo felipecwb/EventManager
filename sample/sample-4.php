@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use PHPFluent\EventManager\Event;
-use PHPFluent\EventManager\Listener;
+use PHPFluent\EventManager\Listener\Listener;
 use PHPFluent\EventManager\Manager;
 
 class MyListener implements Listener

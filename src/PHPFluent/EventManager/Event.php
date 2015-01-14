@@ -10,7 +10,7 @@ class Event
     protected $name;
 
     /**
-     * @var \PHPFluent\EventManager\ListenerCollection
+     * @var \PHPFluent\EventManager\Listener\ListenerCollection
      */
     protected $listenerList;
 
@@ -27,7 +27,7 @@ class Event
     public function __construct($name)
     {
         $this->name         = $name;
-        $this->listenerList = new ListenerCollection();
+        $this->listenerList = new Listener\ListenerCollection();
     }
 
     /**
@@ -43,7 +43,7 @@ class Event
     /**
      * Get the Listener collection
      *
-     * @return \PHPFluent\EventManager\ListenerCollection
+     * @return \PHPFluent\EventManager\Listener\ListenerCollection
      */
     public function getListeners()
     {

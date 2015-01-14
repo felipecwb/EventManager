@@ -1,6 +1,8 @@
 <?php
 
-namespace PHPFluent\EventManager;
+namespace PHPFluent\EventManager\Listener;
+
+use PHPFluent\EventManager\Event;
 
 interface Listener
 {

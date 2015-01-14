@@ -28,13 +28,12 @@ class Manager
      * Add an Event Listener
      *
      * @param string $eventName
-     * @param callable|Listener $listener
+     * @param mixed $listener
+     * @throws \InvalidArgumentException If argument cannot be interpreted
      */
     public function addEventListener($eventName, $listener)
     {
-        if (is_callable($listener)) {
-            $listener = new ListenerCallback($listener);
-        }
+        $listener = Listener\ListenerFactory::create($listener);
 
         $this->getEvent($eventName)
             ->getListeners()

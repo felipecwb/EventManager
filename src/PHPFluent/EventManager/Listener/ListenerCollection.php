@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPFluent\EventManager;
+namespace PHPFluent\EventManager\Listener;
 
 class ListenerCollection implements \IteratorAggregate, \Countable
 {
@@ -34,7 +34,7 @@ class ListenerCollection implements \IteratorAggregate, \Countable
 
     /**
      *
-     * @param \PHPFluent\EventManager\Listener $listener
+     * @param \PHPFluent\EventManager\Listener\Listener $listener
      */
     public function add(Listener $listener)
     {

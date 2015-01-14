@@ -1,8 +1,10 @@
 <?php
 
-namespace PHPFluent\EventManager;
+namespace PHPFluent\EventManager\Listener;
 
-class ListenerCallback implements Listener
+use PHPFluent\EventManager\Event;
+
+class Callback implements Listener
 {
     /**
      * @var \ReflectionFunction
@@ -30,7 +32,8 @@ class ListenerCallback implements Listener
         $firstParameter = array_shift($parameters);
 
         if ($firstParameter instanceof \ReflectionParameter
-                && $firstParameter->isArray()) {
+            && $firstParameter->isArray()
+        ) {
             $arguments = array_reverse($arguments);
         }
 

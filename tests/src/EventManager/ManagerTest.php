@@ -7,13 +7,12 @@ namespace PHPFluent\EventManager;
  */
 class ManagerTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testShouldTriggerEvent()
     {
         $manager  = new Manager();
         $event    = $manager->getEvent('foo');
         $params   = array(1, 2, 3);
-        $listener = $this->getMock('PHPFluent\EventManager\Listener');
+        $listener = $this->getMock('PHPFluent\EventManager\Listener\Listener');
 
         $listener
             ->expects($this->once())
@@ -29,7 +28,7 @@ class ManagerTest extends \PHPUnit_Framework_TestCase
         $manager  = new Manager();
         $event    = $manager->getEvent('foo');
         $params   = array(1, 2, 3);
-        $listener = $this->getMock('PHPFluent\EventManager\Listener');
+        $listener = $this->getMock('PHPFluent\EventManager\Listener\Listener');
 
         $listener
             ->expects($this->never())
